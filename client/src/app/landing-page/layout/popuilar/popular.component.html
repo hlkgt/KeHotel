@@ -1,0 +1,13 @@
+<div class="container py-5">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-md-12 text-center mb-5">
+      <p class="text-warning fs-5">
+        --Hotel dengan rating terbaik, mungkin kamu mau?--
+      </p>
+      <h1 class="fs-2 text-capitalize text-success">popular hotel</h1>
+    </div>
+    <div class="col-md-4" *ngFor="let list of lists">
+      <app-card [list]="list"></app-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="d-flex mb-2">
+  <div *ngFor="let star of [1, 2, 3, 4, 5]">
+    <ng-container *ngIf="star <= rate; else starRegular">
+      <fa-icon [icon]="faStar" class="text-warning"></fa-icon>
+    </ng-container>
+    <ng-template #starRegular>
+      <fa-icon [icon]="faStar" class="text-secondary"></fa-icon>
+    </ng-template>
+  </div>
+</div>

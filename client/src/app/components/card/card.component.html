@@ -1,0 +1,19 @@
+<div class="card p-2 mb-4" style="width: 25rem">
+  <img
+    src="../../../../assets/image/url_image_1.jpg"
+    class="card-img-top"
+    alt="image"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ list.title }}</h5>
+    <span class="card-text mb-1">
+      {{ list.deskripsi }}
+    </span>
+    <span class="mb-2">Rp.{{ list.price }}</span>
+    <app-star [rate]="list.rate"></app-star>
+    <div class="d-flex flex-column gap-2">
+      <a class="btn btn-warning fs-5 fw-semibold">Button warning</a>
+      <a class="btn btn-success fs-5 fw-semibold">Button success</a>
+    </div>
+  </div>
+</div>
