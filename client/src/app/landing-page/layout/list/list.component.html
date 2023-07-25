@@ -1,0 +1,40 @@
+<div class="bg-success py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <p class="text-warning fs-5">--Mau CheckIn sekarang aja?--</p>
+        <h1 class="text-white fs-2">List Kamar</h1>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex gap-2 form-control">
+          <input
+            type="text"
+            placeholder="cari kamar kesukaanmu!"
+            class="bg-transparent w-100"
+            style="border: none"
+          />
+          <fa-icon
+            [icon]="icon.search"
+            class="cursor-pointer text-success"
+          ></fa-icon>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <select class="form-control text-success">
+          <option value="">Filter berdasarkan rating</option>
+          <option value="1">
+            <fa-icon [icon]="icon.star" class="text-warning"></fa-icon>1
+          </option>
+        </select>
+      </div>
+      <div class="col-md-4 mt-5" *ngFor="let list of lists">
+        <app-card [list]="list"></app-card>
+      </div>
+      <div
+        class="col-md-12 d-flex justify-content-center align-items-center mt-4"
+      >
+        <button class="btn btn-warning fw-semibold">Lebih Banyak</button>
+      </div>
+    </div>
+  </div>
+</div>
