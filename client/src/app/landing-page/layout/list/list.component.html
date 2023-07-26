@@ -27,13 +27,22 @@
           </option>
         </select>
       </div>
-      <div class="col-md-4 mt-5" *ngFor="let list of lists">
+      <div
+        class="col-md-4 mt-5"
+        *ngFor="let list of lists.slice(0, showMoreLimit)"
+      >
         <app-card [list]="list"></app-card>
       </div>
       <div
         class="col-md-12 d-flex justify-content-center align-items-center mt-4"
       >
-        <button class="btn btn-warning fw-semibold">Lebih Banyak</button>
+        <button
+          class="btn btn-warning fw-semibold"
+          *ngIf="lists.length > showMoreLimit"
+          (click)="showMore()"
+        >
+          Lebih Banyak
+        </button>
       </div>
     </div>
   </div>

@@ -1,27 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
+
 @Component({
   selector: 'popular-layout',
   templateUrl: './popular.component.html',
 })
 export class PopularComponent {
-  lists: any[] = [
-    {
-      title: 'Hotel SukaSuka',
-      deskripsi: 'BerAC dan nyaman untuk keluarga',
-      price: '300.000',
-      rate: '3',
-    },
-    {
-      title: 'Hotel SukaSuka',
-      deskripsi: 'BerAC dan nyaman untuk keluarga',
-      price: '300.000',
-      rate: '4',
-    },
-    {
-      title: 'Hotel SukaSuka',
-      deskripsi: 'BerAC dan nyaman untuk keluarga',
-      price: '300.000',
-      rate: '2',
-    },
-  ];
+  lists: any;
+  constructor(private servive: ApiService) {}
+  ngOnInit(): void {
+    this.servive.getPopular().subscribe(
+      (result) => {
+        this.lists = result.data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
 }
