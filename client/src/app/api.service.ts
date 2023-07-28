@@ -15,4 +15,7 @@ export class ApiService {
   getPopular(): Observable<any> {
     return this.http.get<any>(this.apiUrl + '/popular');
   }
+  getClient(): Observable<any> {
+    return this.http.get<any>(this.apiUrl + '/client');
+  }
 }

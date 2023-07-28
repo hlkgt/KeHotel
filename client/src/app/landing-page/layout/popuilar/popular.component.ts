@@ -5,7 +5,7 @@ import { ApiService } from 'src/app/api.service';
   selector: 'popular-layout',
   templateUrl: './popular.component.html',
 })
-export class PopularComponent {
+export class PopularComponent implements OnInit {
   lists: any;
   constructor(private servive: ApiService) {}
   ngOnInit(): void {

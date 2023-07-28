@@ -6,7 +6,7 @@ import { faStar, faSearch } from '@fortawesome/free-solid-svg-icons';
   selector: 'list-layout',
   templateUrl: './list.component.html',
 })
-export class ListComponent {
+export class ListComponent implements OnInit {
   lists: any;
   showMoreLimit: number = 6;
   constructor(private service: ApiService) {}

@@ -9,6 +9,7 @@ import { HomeComponent } from './landing-page/layout/home/home.component';
 import { AboutComponent } from './landing-page/layout/about/about.component';
 import { PopularComponent } from './landing-page/layout/popuilar/popular.component';
 import { ListComponent } from './landing-page/layout/list/list.component';
+import { ClientComponent } from './landing-page/layout/client-say/client.component';
 
 import { AppStar } from './components/star-rating/star.component';
 import { AppCard } from './components/card/card.component';
@@ -21,6 +22,7 @@ import { AppCard } from './components/card/card.component';
     AboutComponent,
     PopularComponent,
     ListComponent,
+    ClientComponent,
     AppStar,
     AppCard,
   ],

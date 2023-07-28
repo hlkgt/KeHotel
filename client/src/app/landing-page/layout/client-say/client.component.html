@@ -1,0 +1,29 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <p class="text-warning fs-5">--hehehe--</p>
+      <h1 class="text-success fs-2">Ulasan Client</h1>
+    </div>
+    <div class="col-md-4 mt-5" *ngFor="let client of clients">
+      <div class="card p-3">
+        <div class="d-flex align-items-center gap-3">
+          <img
+            src="../../../../assets/image/{{ client.image_profile }}"
+            alt="test-image"
+            class="img-fluid rounded-circle"
+            width="60"
+          />
+          <div class="d-flex justify-content-center flex-column">
+            <h1 class="fs-4">{{ client.username }}</h1>
+            <div class="d-flex gap-2">
+              <p class="fs-5">{{ client.hotel_name }}</p>
+              <app-star [rate]="client.rate"></app-star>
+            </div>
+          </div>
+        </div>
+        <p>{{ client.deskripsi }}</p>
+        <p class="text-end">{{ client.date }}</p>
+      </div>
+    </div>
+  </div>
+</div>
