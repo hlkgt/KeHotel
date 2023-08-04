@@ -1,27 +1,75 @@
-# Client
+# KeHotel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+KeHotel adalah pembelajaran saya tentang slicing menggunakan Framework Frontend yaitu AngularJs dengan desain figma dan juga data dari server yang dibuat menggunakan nodejs dengan database mysql.
 
-## Development server
+## Tools Yang dibutuhkan
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Nodejs V.14+
+- npm (otomatis terinstall saat instalasi nodejs dilakukan)
 
-## Code scaffolding
+## Clone Repository
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Clone Repository dengan code
 
-## Build
+```
+git clone https://github.com/hlkgt/KeHotel.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Setup Database
 
-## Running unit tests
+- Siapkan database dengan nama "angular_project"
+- Lalu import file sql angular_project.sql
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instalasi Package Yang Dibutuhkan
 
-## Running end-to-end tests
+1. Buka folder "KeHotel" , siapkan dua terminal untuk menginstall package yang dibutuhkan dari dua folder(client dan server)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- terminal pertama untuk client:
 
-## Further help
+```
+cd client
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=> install package yang dibutuhkan pada folder "client"
+
+```
+npm install
+```
+
+=> jalankan local server client
+
+```
+ng serve
+```
+
+=> buka pada browser
+
+```
+localhost:4200
+```
+
+- terminal kedua untuk server:
+
+```
+
+cd server
+
+```
+
+=> install package yang dibutuhkan pada folder "server"
+
+```
+
+npm install
+
+```
+
+=> Jalankan Server
+
+```
+
+npm run serve
+
+```
+
+## Aplikasi Berhasil Dijalankan
